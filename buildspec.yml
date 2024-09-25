@@ -1,0 +1,13 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+      - BASE_URL=$BASE_URL yarn install
+      - yarn build
+artifacts:
+  files:
+    - .output/**/*
+    - scripts/**/*
+    - appspec.yml
+    - package.json
