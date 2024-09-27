@@ -46,4 +46,6 @@ jobs:
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name MyDemoDeploymentGroup
           --s3-location bucket=linme-dev/front,key=build-fe.zip,bundleType=zip
+env:
+  ACTIONS_STEP_DEBUG: true
 
