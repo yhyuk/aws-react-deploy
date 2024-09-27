@@ -41,9 +41,9 @@ jobs:
           aws s3 cp --region ap-northeast-2 ./build-fe.zip s3://linme-dev/front/build-fe.zip
 
       - name: Deploy # Deploy to EC2
-        run: aws deploy create-deployment \
-          --application-name MyDemoApplication \
-          --deployment-config-name CodeDeployDefault.AllAtOnce \
-          --deployment-group-name MyDemoDeploymentGroup \
-          --s3-location bucket=linme-dev,key=build-fe.zip,bundleType=zip
-
+        run: |
+          aws deploy create-deployment \
+            --application-name MyDemoApplication \
+            --deployment-config-name CodeDeployDefault.AllAtOnce \
+            --deployment-group-name MyDemoDeploymentGroup \
+            --s3-location bucket=linme-dev,key=build-fe.zip,bundleType=zip
