@@ -3,9 +3,3 @@ os: linux
 files:
   - source: /
     destination: /home/linme/front/linme-client-web/
-hooks:
-  AfterInstall:
-    - location: scripts/deploy.sh
-      timeout: 60
-      runas: ubuntu
-
