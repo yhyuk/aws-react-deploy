@@ -24,7 +24,8 @@ fi
 echo "pm2 설치 확인 및 설치"
 if ! command -v pm2 &> /dev/null; then
     echo "pm2가 설치되지 않았습니다. 설치 중..."
-    sudo yarn global add pm2  # sudo 사용
+    yarn global add pm2  # sudo 없이 pm2를 로컬로 설치
+    export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 else
     echo "pm2가 이미 설치되어 있습니다."
 fi
