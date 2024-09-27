@@ -46,4 +46,4 @@ jobs:
             --application-name MyDemoApplication \
             --deployment-config-name CodeDeployDefault.AllAtOnce \
             --deployment-group-name MyDemoDeploymentGroup \
-            --s3-location bucket=linme-dev,key=build-fe.zip,bundleType=zip
+            --s3-location bucket=linme-dev,key=front/build-fe.zip,bundleType=zip
