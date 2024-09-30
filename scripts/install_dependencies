@@ -4,6 +4,10 @@ source $NVM_DIR/nvm.sh;
 
 nvm use v20.9.0
 echo 'Installing dependencies...'
+
+# 작업 디렉터리를 프로젝트 경로로 변경
+cd /home/linme/front/linme-client-web
+
 yarn cache clean
 yarn install
 yarn build-dev
