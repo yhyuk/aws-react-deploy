@@ -2,7 +2,7 @@ name: Deploy # Workflow 이름
 on: # Event 감지
   push:
     branches:
-      - master # 해당 브랜치의 푸쉬가 일어날 때 CI/CD를 진행하겠다는 뜻
+      - master # 해당 브랜치 푸시 -> CI/CD
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
           CI: ""
 
       - name: zip create
-        # zip 파일을 만듭니다(파일명은 자유, 대신 아래 workflow에 적을 파일명과 동일하게 맞춰주세요).
+        # zip 파일 생성
         run: zip -qq -r ./build-fe.zip .
         shell: bash
 

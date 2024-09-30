@@ -5,10 +5,10 @@ files:
     destination: /home/linme/front/linme-client-web/
 hooks:
   AfterInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/install_dependencies
       timeout: 300
       runas: linme
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: scripts/start_server
       timeout: 300
       runas: linme
