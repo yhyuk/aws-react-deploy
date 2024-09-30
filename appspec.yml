@@ -6,7 +6,7 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies
-      timeout: 600
+      timeout: 1200
       runas: linme
   ApplicationStart:
     - location: scripts/start_server
