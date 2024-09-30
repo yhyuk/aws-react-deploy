@@ -1,3 +1,11 @@
 #!/bin/bash
-service httpd start
 
+export NVM_DIR=$HOME/.nvm;
+source $NVM_DIR/nvm.sh;
+
+nvm use v20.9.0
+echo 'Stopping previous instance...'
+pm2 delete linme-client-web
+
+echo 'Starting new instance...'
+pm2 start "yarn start-dev" --name linme-client-web
